@@ -1,0 +1,16 @@
+{
+  "name": "schlachthof",
+  "version": "1.0.0",
+  "description": "Website for Alter Schlachthof Stade",
+  "main": "app.js",
+  "scripts": {
+    "sass": "node-sass -w sass/ -o css/"
+  },
+  "author": "YOUNG LIGHTS",
+  "license": "MIT",
+  "dependencies": {
+    "jump.js": "^1.0.2",
+    "node-sass": "^4.12.0",
+    "smoothscroll-polyfill": "^0.4.4"
+  }
+}

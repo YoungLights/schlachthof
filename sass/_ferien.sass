@@ -1,0 +1,95 @@
+.ferienspass-mask
+	background: $dark
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	width: 100%
+	height: 100%
+	+opacit(85)
+	z-index: 200
+
+#ferien
+	position: relative
+	background-image: url('../img/background/ferienspass-1.jpg') 
+	background-size: cover
+	background-position: center center
+	color: $white
+	background-color: $dark
+	margin-top: 0px 
+	height: 100vh
+	display: flex
+	align-items: center
+	justify-content: center
+
+	header, #ferienspass-grid
+		z-index: 300
+		position: relative
+
+	header
+		text-align: center
+
+		h1
+			color: $skyblue
+			font-size: 2.5em
+			margin-bottom: 30px
+
+	#ferienspass-grid
+		text-align: center
+		
+		h2		
+			font-weight: 600
+			font-size: 1.1em
+			letter-spacing: 2px
+			margin-bottom: 40px	
+			line-height: 160%
+
+		div
+			display: inline-block
+			margin: 40px
+
+			img
+				display: block
+				height: 60px
+				width: 60px
+				margin: 0px auto
+				margin-bottom: 20px
+
+@media only screen and (max-width:1280px)
+	#ferien
+		height: auto
+		
+		header 
+			h1
+				font-size: 2.2em
+		
+		#ferienspass-grid
+			h2 
+				font-size: 1em
+		
+			div
+				margin: 20px 
+
+				img 
+					height: 50px
+					width: 50px
+
+@media only screen and (max-width:950px)
+	#ferien 
+		header
+			h1 
+				font-size: 1.9em
+
+		#ferienspass-grid
+			h2 
+				font-size: 0.9em
+
+			div
+				margin: 20px 10px
+
+
+				img 
+					height: 45px
+					width: 45px
+

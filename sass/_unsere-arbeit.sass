@@ -1,0 +1,227 @@
+#unsere-arbeit
+	background: $dark
+	overflow: hidden
+	
+	header, footer
+		text-align: right
+		padding: 0px 140px
+		height: 80px
+		background: #000
+		position: relative
+
+		span 
+			display: block
+			position: absolute
+			background: $turquoise
+			z-index: 10
+			width: 100%		
+			height: 20px
+			top: 0
+			bottom: 0
+			margin: auto
+			+skew(-30deg)
+
+	header
+		span
+			left: -500px
+
+		h1
+			color: $turquoise
+			text-align: right
+			transform: translateY(60%)
+
+	#unsere-arbeit-grid
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr
+		color: $white
+
+		.unsere-arbeit-bg
+			text-align: center
+			background-position: center center
+			background-size: cover
+			position: relative
+
+			&:nth-child(1)
+				background-image: url('../img/background/arbeit.jpg')
+			
+			&:nth-child(2)
+				background-image: url('../img/background/jugend.jpg')
+			
+			&:nth-child(3)
+				background-image: url('../img/background/mitmachen.jpg')
+
+			&:hover span.unsere-arbeit-mask
+				+opacit(95)
+
+			&:hover .unsere-arbeit-padding
+				padding: 110px 50px
+				margin: 80px 40px 
+
+			span.unsere-arbeit-mask
+				position: absolute
+				background: #20333b
+				+opacit(80)
+				height: 100%
+				width: 100%	
+				top: 0px
+				bottom: 0px
+				left: 0px
+				right: 0px
+				+transit(all 0.3s ease-in-out)
+		
+			.unsere-arbeit-padding
+				padding: 90px 50px
+				margin: 100px 40px 
+				position: relative
+				z-index: 1
+				+transit(all 0.3s ease-in-out 0.2s)
+
+				span.item-border
+					border: solid 2px $turquoise
+					position: absolute
+					top: 0px
+					bottom: 0px
+					left: 0px
+					right: 0px
+					z-index: -1
+
+				img 
+					width: 55px
+					height: 55px
+					display: block
+					margin: 0px auto
+				
+				h2, h1
+					font-weight: 600
+
+				h2 
+					font-size: 1.2em
+					margin-top: 40px
+					letter-spacing: 2px 
+
+				h1
+					color: $turquoise
+					font-size: 1.8em 
+
+				p
+					line-height: 200%
+					font-size: 0.65em
+					margin-top: 50px
+					margin-bottom: 50px
+					font-weight: 600
+					letter-spacing: 1px
+					text-transform: uppercase
+
+@media only screen and (max-width:1550px)
+	#unsere-arbeit
+		#unsere-arbeit-grid
+			.unsere-arbeit-bg
+				&:hover .unsere-arbeit-padding
+					padding: 80px 50px
+					margin: 50px 40px
+				
+				.unsere-arbeit-padding
+					padding: 60px 50px
+					margin: 70px 40px 
+
+		header, footer
+			padding: 0px 90px
+			height: 60px
+
+			span 	
+				height: 10px
+
+		header
+			h1
+				transform: translateY(33%)
+
+@media only screen and (max-width:1350px)
+	#unsere-arbeit
+		#unsere-arbeit-grid
+			.unsere-arbeit-bg
+				&:hover .unsere-arbeit-padding
+					margin: 50px 20px
+
+				.unsere-arbeit-padding
+					margin-left: 20px 
+					margin-right: 20px
+
+					img 
+						width: 50px
+						height: 50px
+
+					h1 
+						font-size: 1.5em
+
+					h2 
+						font-size: 1em
+
+					p 
+						font-size: 0.6em
+						margin-top: 30px
+
+@media only screen and (max-width:1210px)
+	#unsere-arbeit
+		#unsere-arbeit-grid
+			.unsere-arbeit-bg
+				&:hover .unsere-arbeit-padding
+					padding: 80px 30px
+				
+				.unsere-arbeit-padding
+					padding-left: 30px
+					padding-right: 30px
+
+					p 
+						display: none
+
+					h1 
+						margin-bottom: 20px
+
+@media only screen and (max-width:980px)
+	#unsere-arbeit
+		#unsere-arbeit-grid
+			grid-template-columns: 1fr
+
+			.unsere-arbeit-bg
+				&:hover .unsere-arbeit-padding
+					padding: 50px 30px
+					margin: 20px 20px
+
+				.unsere-arbeit-padding
+					padding: 40px 30px
+					margin: 30px 20px
+
+					h1 
+						font-size: 1.3em
+
+					h2 
+						margin-top: 25px
+						font-size: 0.9em
+
+					img 
+						width: 45px
+						height: 45px
+
+@media only screen and (max-width:680px)
+	#unsere-arbeit
+		header, footer
+			padding: 0px 50px
+			height: 55px
+
+			span 	
+				height: 10px
+
+		header
+			span 
+				left: -400px
+			
+			h1
+				transform: translateY(45%) 
+
+@media only screen and (max-width:400px)
+	#unsere-arbeit
+		header
+			padding: 0px 25px
+			
+			span 
+				left: -250px

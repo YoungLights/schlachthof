@@ -1,0 +1,133 @@
+/* Page header for news, archiv and other pages */
+.page-header-events
+	img 
+		object-position: center 50% !important
+
+.page-header-arbeit
+	img 
+		object-position: center 70% !important
+
+.page-header-geschichte
+	height: 600px !important
+	position: relative
+	padding: 60px 60px
+	+transit(all 0.4s ease-in-out)
+
+	img.page-header-img
+		filter: grayscale(100%)
+		+transit(all 0.2s ease-in-out)
+
+	&:hover
+		padding: 0px
+
+	&:hover .page-header-geschichte-details div.geschichte-mask
+		+opacit(40)
+	
+	&:hover img.page-header-img
+		filter: grayscale(0)	
+
+	.page-header-geschichte-details
+		position: relative
+		width: 100%
+		height: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		
+		div.geschichte-mask
+			background: $black
+			position: absolute
+			top: 0
+			left: 0
+			+opacit(60)
+			width: 100%
+			height: 100%
+			z-index: 300
+			+transit(all 0.2s ease-in-out)
+		
+		div.geschichte-flex-item
+			text-align: center
+			position: relative
+			z-index: 1000
+			
+		h2
+			color: $white
+			font-size: 2.2em
+			font-weight: 400
+			margin-bottom: 60px
+			letter-spacing: 2px
+
+			span 
+				color: $yellow
+
+		a:link, a:active, a:visited
+			display: inline-block
+			color: $white
+			font-weight: 900
+			font-size: 0.7em
+			letter-spacing: 6px
+			width: 220px
+			margin: 0px 20px
+			text-transform: uppercase
+			padding: 20px
+			+brd(10px) 
+			border: 1px solid $yellow
+
+			&:hover
+				background: $yellow
+	
+.page-header-raeume
+	height: 600px !important
+
+	.page-header-raeume-details
+		position: absolute
+		top: 30px
+		left: 120px
+		position: absolute
+		z-index: 200
+		+opacit(0)
+		transform: translateX(-100px)
+		+transit(all 0.2s ease-in-out 0.1s)
+
+		p 
+			font-weight: 600
+			font-size: 1.2em
+			color: $white
+		
+		h2 
+			font-size: 2.7em
+			color: $yellow
+			font-weight: 400
+	
+.page-header
+	background: $dark
+	height: 350px
+	display: flex
+	justify-content: center
+	align-items: center
+	position: relative
+	overflow: hidden
+
+	h1 
+		color: $yellow
+		font-size: 2.8em
+		position: relative
+		z-index: 2
+		+transit(all 0.3s ease-in-out 0.3s)
+		transform: translateY(-40px)
+		+opacit(0)
+
+	img.page-header-img, img.raeume-header-img 
+		width: 100%
+		height: 100%
+		position: absolute
+		object-fit: cover
+		object-position: center 30%
+		z-index: 1
+
+	img.raeume-header-img 	
+		+opacit(0)
+		
+	img.page-header-img	
+		+opacit(0)
+		+transit(all 0.3s ease-in-out 0.05s)

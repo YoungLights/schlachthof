@@ -1,0 +1,70 @@
+#kurse
+	text-align: center
+	background-image: url('../img/background/bubbles.jpg') 
+	background-size: cover
+	background-position: top center
+	padding-bottom: 150px 
+
+	h1
+		color: $lila
+		margin-bottom: 70px
+
+	#kurse-grid
+		display: grid 
+		grid-template-columns: 1fr 1fr 1fr 1fr
+		grid-gap: 20px
+		margin-top: 50px
+
+		div
+			border: solid 3px $lila
+			padding: 30px
+			+brd(50px)
+
+			span 
+				display: block
+				background: $petrol
+				height: 70px
+				width: 70px
+				+brd(100%)
+				margin: 0px auto
+				margin-bottom: 20px
+				position: relative
+
+				img
+					height: 30px
+					width: 30px
+					@extend .imgcenter
+
+			h4
+				font-size: 0.9em
+				letter-spacing: 2px
+				color: $lila
+
+			a:link, a:active, a:visited
+				display: inline-block
+				margin-top: 35px
+
+@media only screen and (max-width:1450px)
+	#kurse 
+		#kurse-grid
+			grid-template-columns: 1fr 1fr 1fr
+
+			div 
+				padding: 25px 20px 
+
+				h4 
+					letter-spacing: 1px
+
+@media only screen and (max-width:1024px)
+	#kurse 
+		#kurse-grid
+			grid-template-columns: 1fr 1fr
+
+@media only screen and (max-width:680px)
+	#kurse 
+		#kurse-grid
+			grid-template-columns: 1fr
+
+			div 
+				a:link, a:active, a:visited
+					margin-top: 25px

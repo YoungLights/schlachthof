@@ -1,0 +1,48 @@
+/* Body Settings ------------------------------------------------------------------------------*/
+body, html 
+	font-family: $main-font
+	height: 100%
+	width: 100%
+	position: relative
+
+/* Global Reset -------------------------------------------------------------------------------*/
+*
+	box-sizing: border-box
+	padding: 0
+	margin: 0
+	border: none
+
+/* Global Font Settings -----------------------------------------------------------------------*/
+h1, h2, h3, h4, h5
+	text-transform: uppercase	
+
+/* Clears -------------------------------------------------------------------------------------*/
+.clear-left	
+	clear: left
+.clear-right 
+	clear: right
+.clear-both 
+	clear: both
+
+/* Link Settings ------------------------------------------------------------------------------*/
+a, a:link, a:active, a:visited 
+	text-decoration: none
+	cursor: pointer
+	+transit (all 0.15s ease-in)
+
+/* Image Absolute Centered ---------------------------------------------------------------------*/
+.imgcenter
+	position: absolute
+	margin: auto
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+
+.imgud
+	position: absolute
+	margin: auto
+	top: -9999px
+	bottom: -9999px
+	right: -9999px
+	left: -9999px

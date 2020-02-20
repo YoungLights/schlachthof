@@ -1,0 +1,162 @@
+#maedchenarbeit
+	// background: rgb(255,246,221)
+	// background: rgba(255, 180, 0, 0.4)
+	background: pink
+	display: grid
+	grid-template-columns: 1.2fr 0.8fr
+	position: relative
+	overflow: hidden
+
+	img.maedchenarbeit-prisma
+		position: absolute
+		top: 0
+		bottom: 0
+		object-fit: cover
+		width: 100%
+		height: 100%
+		+opacit(50)
+	 
+	h1
+		color: #6f2954
+		margin-bottom: 60px
+
+	#infos, #angebote
+		padding: 100px 120px 100px 120px
+		z-index: 20
+		position: relative
+
+	#infos
+		h4
+			color: #51224f
+			letter-spacing: 1px
+			font-size: 1em
+
+		p 
+			color: #6f4e61
+			line-height: 200%
+			font-size: 0.9em
+			font-weight: 500
+			margin-top: 20px
+			padding-right: 30px
+			
+		#infos-team
+			display: grid
+			grid-template-columns: auto auto
+			margin-top: 80px
+			grid-gap: 40px
+
+			#team-picture
+				width: 200px
+				height: 200px
+				background: #6f4e61
+				+brd(100%)
+				position: relative
+				overflow: hidden
+
+				span 
+					border: solid 1px $white
+					width: 180px
+					height: 180px
+					@extend .imgcenter
+					+brd(100%)
+					z-index: 200
+
+				img
+					height: 100%
+					width: 100%
+					object-fit: cover
+					object-position: center center
+
+			#team-desc
+				span 
+					color: #a06b7c
+					text-transform: uppercase
+					font-weight: 600
+					font-size: 0.8em
+
+	#angebote		
+		//background: rgba(64,39,86,0.9)
+
+		img.maedchenarbeit-curve
+			position: absolute
+			top: 0px
+			right: 0px
+			left: -420px
+			bottom: 0px
+			object-fit: contain
+			+opacit(85)
+			z-index: -1
+			height: 100% 
+		
+		h2
+			padding: 20px
+			text-align: center
+			color: $white
+			+brd(40px)
+			background: $lightorange
+			font-size: 1em
+			letter-spacing: 2px
+			font-weight: 900
+			position: relative
+			margin-top: 0px
+
+		a:link, a:active, a:visited
+			margin-right: 20px	
+			margin-top: 50px
+
+		#angebote-list
+			margin-top: 50px	
+
+			article
+				padding: 25px 15px
+				border-bottom: dashed 2px $white
+				cursor: pointer
+				+transit(all 0.2s ease-in-out)
+				position: relative
+
+				i 
+					position: absolute 
+					right: 0px
+					font-size: 1.4em
+					color: $lightorange
+					top: 50%
+					transform: translate(-30px, -50%)
+					+transit(all 0.2s ease-in-out)
+					+opacit(0)
+
+				&:hover i
+					transform: translate(-15px, -50%)
+					+opacit(100)
+				
+				&:hover
+					background: rgba(64,39,86,0.5)
+
+				&:last-child
+					border-bottom: none
+
+				span 
+					color: $white
+					font-weight: 800
+					letter-spacing: 4px
+					font-size: 1.1em
+
+				h4
+					color: $lightorange
+
+				p 
+					font-size: 0.8em
+					line-height: 170%
+					color: $white
+
+@media only screen and (max-width:1700px)
+	#maedchenarbeit
+		#infos
+			p 
+				line-height: 180%
+
+		#angebote
+			a:link, a:active, a:visited
+				margin-right: 10px
+				padding: 15px 20px
+				font-size: 0.6em
+				letter-spacing: 1px

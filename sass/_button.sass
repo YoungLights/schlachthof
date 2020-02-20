@@ -1,0 +1,110 @@
+/* Global button styles */
+.btn
+	text-transform: uppercase
+	font-weight: 800
+	font-size: 0.65em
+	+brd(15px)
+	padding: 17px 35px
+	letter-spacing: 2px
+	border-width: 2px
+	border-style: solid
+	display: inline-block
+	cursor: pointer
+
+	&.btn-lightorange
+		background: $lightorange
+		color: $white
+		border-color: $lightorange
+
+		&:hover
+			background: none
+			color: $lightorange
+
+	&.btn-skyblue
+		background: $skyblue
+		color: $white
+		border-color: $skyblue
+
+		&:hover
+			background: none
+			color: $skyblue
+
+	&.btn-lila
+		background: $lila
+		color: $white
+		border-color: $lila
+
+		&:hover
+			background: none
+			color: $lila
+
+	&.btn-darkblue
+		background: $darkblue
+		color: $orange
+		border-color: $darkblue
+
+	&.btn-turquoise
+		background: $turquoise 
+		border-color: $turquoise
+		color: $white
+
+		&:hover
+			background: none
+			color: $turquoise
+
+	&.btn-yellow
+		background: $yellow
+		color: $dark
+		border-color: $yellow
+
+		&:hover
+			background: none
+
+	&.btn-dark
+		background: $dark
+		color: $yellow
+		border-color: $dark
+
+		&:hover
+			background: none
+
+	&.btn-dark-blue
+		border-color: $dark
+		background: $dark
+		color: $turquoise
+
+		&:hover
+			background: none
+
+/* Back button */
+.back-btn
+	width: 80px
+	height: 80px
+	background: $yellow
+	position: fixed 
+	right: 40px
+	bottom: 40px
+	+brd(100%)
+	cursor: pointer
+	display: flex
+	justify-content: center
+	align-items: center
+	+shadow(7px 9px 20px -13px rgba(0,0,0,0.9))
+	z-index: 9999
+	+transit(all 0.3s ease-in-out)
+
+	&:hover
+		+shadow(15px 15px 20px -13px rgba(0,0,0,0.5))
+		width: 85px
+		height: 85px
+
+	i 
+		color: $white
+		font-size: 1.7em
+
+@media only screen and (max-width:680px)
+	.btn
+		font-size: 0.55em
+		padding: 15px 30px
+		letter-spacing: 1px
+		border-width: 2px

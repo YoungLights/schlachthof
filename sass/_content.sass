@@ -1,0 +1,169 @@
+/* Global body text class */
+.bodytext
+	line-height: 190%
+	font-size: 0.9em
+	font-weight: 400 
+
+/* Headlines of moin section */
+.main-headline
+	letter-spacing: 0px
+	font-weight: 900
+	font-size: 1.9em
+
+	i 
+		margin-right: 8px
+
+.main-headline-sb
+	margin-bottom: 30px	
+	font-weight: 900
+	font-size: 1.1em
+
+.main-headline-mb, .main-headline-yellow
+	margin-bottom: 50px
+	font-weight: 900
+	font-size: 1.1em
+
+.main-headline-tq
+	color: $turquoise
+
+.main-headline-yellow
+	color: $yellow
+
+	span
+		border-left: 1px solid $black
+		color: $black
+		padding-left: 10px
+		margin-left: 10px
+ 
+.section-headline
+	transform: translateY(-130px)  
+	position: absolute
+	text-transform: uppercase
+	font-size: 1.2em
+	letter-spacing: 1px
+	padding: 20px 40px
+	width: 300px
+	text-align: center
+
+	&.news-headline
+		background: $yellow
+		color: $dark
+
+	&.events-headline
+		background: $dark
+		color: $yellow
+
+/* Global grid and padding classes */
+.section-content
+	padding: 100px 180px 120px 180px
+
+.content-geschichte
+	article
+		.main-headline
+			color: $yellow !important
+
+		h2 
+			color: $dark !important	
+	
+.content-normal
+	.content-inner
+		margin-bottom: 100px
+	
+	article
+		margin-bottom: 50px
+		
+		h2
+			color: $turquoise
+			font-size: 1em
+			margin-bottom: 5px
+			display: block 
+
+		p 
+			color: $textgrey
+			@extend .bodytext
+
+/* Different Sidebar settings */
+.grid-sidebar
+	display: grid
+	grid-template-columns: 1.2fr 0.8fr
+	
+	.content-news, .content-normal
+		padding: 100px 120px 120px 120px
+
+	.sidebar
+		padding: 100px 90px
+		background: $lightgrey
+
+	.sidebar-events
+		padding: 100px 0px 120px 40px
+
+@media only screen and (max-width:1600px)
+	.section-content
+		padding: 100px 150px 120px 150px
+
+@media only screen and (max-width:1280px)
+	.section-content
+		padding: 100px 120px 120px 120px
+
+@media only screen and (max-width:1024px)
+	.bodytext
+		font-size: 0.8em
+	
+	.grid-sidebar
+		grid-template-columns: 1fr
+
+		.content-news, .content-normal
+			padding: 90px 60px 110px 60px
+
+		.sidebar-events
+			padding: 90px 60px 110px 60px
+
+	.section-headline
+		transform: translateY(0px) 
+		font-size: 1.7em
+		letter-spacing: 1px
+		padding: 0px 0px 25px 0px
+		width: auto
+		position: relative
+		text-align: left
+
+		&.news-headline
+			background: none
+			color: $dark
+
+		&.events-headline
+			background: none
+			color: $yellow
+
+@media only screen and (max-width:980px)
+	.section-content
+		padding: 100px 90px 120px 90px
+
+@media only screen and (max-width:680px)
+	.bodytext
+		line-height: 180%
+		font-size: 0.7em	
+	
+	.section-content
+		padding: 80px 60px 100px 60px
+
+	.main-headline
+		font-size: 1.4em
+
+	.grid-sidebar
+		.content-news, .content-normal
+			padding: 80px 40px 100px 40px
+
+		.sidebar-events
+			padding: 80px 40px 100px 40px
+
+@media only screen and (max-width:480px)
+	.grid-sidebar
+		.content-news, .content-normal
+			padding: 80px 20px 100px 20px
+
+		.sidebar-events
+			padding: 80px 20px 100px 20px	
+	
+	.section-content
+		padding: 80px 20px 80px 20px

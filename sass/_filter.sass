@@ -1,0 +1,27 @@
+.filter
+    margin-bottom: 80px
+    
+    span
+        border: 3px solid $black
+        display: flex
+        align-items: center
+        margin-bottom: 12px
+        padding: 15px 40px
+        +brd(20px)
+        cursor: pointer
+        +transit(all 0.2s ease-in-out)
+
+        &:hover
+            background: $black
+        
+        &:hover h3
+           transform: translateX(10px)
+
+        h3
+            font-size: 0.9em  
+            color: $turquoise
+            margin-left: 20px
+            +transit(all 0.2s ease-in-out)
+
+        img 
+            height: 30px

@@ -1,0 +1,74 @@
+#emotion
+	height: 350px
+	background: $yellow
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+
+	div 
+		text-align: center
+		position: relative
+		z-index: 200
+		text-transform: uppercase
+		font-family: $sec-font
+
+		h1 
+			font-size: 5em
+
+		p 
+			letter-spacing: 2px
+			font-size: 1.4em
+			font-weight: 900
+
+	img 
+		height: 100%
+		width: 100%
+		object-fit: cover
+		position: absolute
+		top: 0px
+		left: 0px
+		object-position: center center
+		+opacit(20)
+	
+footer#main-footer
+	background: $white
+	display: grid
+	grid-template-columns: auto auto
+	align-items: center
+
+	#footer-skew
+		width: 500px
+		background: $black
+		transform: skewX(22deg)
+		height: 150px
+		transform-origin: bottom left
+		padding-left: 140px
+		position: relative
+
+		img
+			transform: skewX(-22deg)
+			position: absolute
+			margin: auto
+			height: 70px
+			width: auto
+			top: 0
+			bottom: 0
+
+	#footer-nav
+		justify-self: end
+		padding-right: 140px
+
+		a:link, a:active, a:visited
+			margin-left: 50px
+			text-transform: uppercase
+			font-weight: 900
+			color: $dark
+			letter-spacing: 2px
+			font-size: 0.8em
+
+			&:hover
+				color: $yellow
+
+	
+	

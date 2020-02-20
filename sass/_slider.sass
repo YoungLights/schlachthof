@@ -1,0 +1,261 @@
+.bx-wrapper
+	position: relative
+	*zoom: 1
+	ms-touch-action: pan-y
+	touch-action: pan-y
+
+ul.bxslider
+	list-style: none
+	
+	li
+		height: 100%
+
+.bx-viewport
+	-webkit-transform: translatez(0)
+
+.bx-wrapper .bx-pager,.bx-wrapper .bx-controls-auto
+	position: absolute
+	bottom: 0px
+	width: 100%
+
+.bx-wrapper .bx-pager
+	text-align: center
+
+.bx-pager
+	transform: translateY(-120px)
+	z-index: 200
+
+.bx-pager-link
+	height: 15px
+	width: 20px
+	display: block
+	border: solid 4px $white !important
+	+brd(100%)
+	margin: 0px 10px
+	cursor: pointer
+	+transit(all 0.2s ease-in-out)
+
+	&:hover, &.active 
+		background: $yellow	!important
+ 
+.bx-wrapper .bx-pager.bx-default-pager a
+	text-indent: -9999px
+	display: block
+	background: $white
+	height: 20px
+	width: 20px
+	border: solid 3px $white
+	margin: 0 10px
+	+brd(100%)
+
+.bx-wrapper .bx-pager-item, .bx-wrapper .bx-controls-auto .bx-controls-auto-item
+	display: inline-block
+	
+.controlls	
+	a.bx-next, a.bx-prev
+		+brd(100%)		
+		position: absolute
+		border: solid 3px $white
+		margin: auto
+		top: 0
+		bottom: 0
+		display: block 
+		width: 80px
+		height: 80px
+		z-index: 400
+		+opacit(0)
+
+	a.bx-next
+		right: 100px
+		transform: translateX(100px)
+
+		&:hover
+			transform: translateX(-10px) !important
+
+	a.bx-prev
+		left: 100px
+		transform: translateX(-100px)
+
+		&:hover
+			transform: translateX(10px) !important
+
+	img 
+		height: 25px
+		width: 25px
+		@extend .imgcenter
+	
+#slider
+	height: 550px
+	width: 100%
+	position: relative
+	background: $dark
+
+	&:hover .slide div.slide-item img
+		+opacit(25)
+
+	.slide
+		background: $dark
+		position: relative
+		height: 550px
+		overflow: hidden
+
+		div.slide-item
+			display: grid
+			justify-content: center
+			align-items: center	
+			position: relative
+			z-index: 200
+			height: 100%
+			
+			img 
+				position: absolute
+				height: auto
+				top: 0px
+				left: 0px
+				height: 100%
+				width: 100%
+				object-fit: cover
+				+opacit(0)
+			
+			div
+				transform: translateY(-80px)
+				+transit(all 0.3s ease-in-out 0.35s)
+				+opacit(0)
+				z-index: 400 
+				position: relative
+
+				h2
+					letter-spacing: 6px
+					font-weight: 800
+					font-size: 2rem
+					line-height: 10px
+					color: $white
+			
+				h1
+					font-size: 5rem
+					font-weight: 400
+					letter-spacing: 4px
+					margin-left: -6px
+					color: $yellow
+
+@media only screen and (max-width:1480px)
+	.controlls	
+		a.bx-next, a.bx-prev
+			width: 70px
+			height: 70px
+
+			img 
+				width: 20px
+				height: 20px
+
+		a.bx-next
+			right: 70px
+
+		a.bx-prev
+			left: 70px
+	
+	#slider
+		.slide
+			div.slide-item
+				div 
+					h1 
+						font-size: 4.2rem
+					
+					h2 
+						font-size: 1.5rem
+
+@media only screen and (max-width:1280px)
+	.controlls	
+		a.bx-next, a.bx-prev
+			width: 60px
+			height: 60px
+
+			img 
+				width: 15px
+				height: 15px
+
+		a.bx-next
+			right: 40px
+
+		a.bx-prev
+			left: 40px
+
+	#slider
+		.slide
+			div.slide-item
+				div 
+					h1 
+						font-size: 3.8rem
+						letter-spacing: 2px
+					
+					h2 
+						font-size: 1.2rem	
+						letter-spacing: 4px
+
+@media only screen and (max-width:1024px)
+	.controlls
+		display: none
+
+@media only screen and (max-width:890px)
+	#slider
+		height: 85vh
+		
+		.slide
+			height: 85vh
+			
+			div.slide-item
+				div 
+					h1 
+						font-size: 3.3rem
+						letter-spacing: 1px
+						line-height: 110%
+					
+					h2 
+						font-size: 1rem
+						margin-bottom: 5px
+
+@media only screen and (max-width:650px)
+	#slider
+		.slide
+			div.slide-item
+				div 
+					padding: 0px 30px
+					text-align: center
+
+					h1 
+						font-size: 3rem
+						letter-spacing: 0px
+					
+					h2 
+						font-size: 1rem	
+						line-height: 140%
+
+						span 
+							display: block
+							font-size: 1.6em
+							letter-spacing: 6px
+
+
+							&:after
+								content: ''
+								display: block 
+								margin: 15px 0px 7px 0px
+								height: 1px
+								background: $white
+								width: 100%
+
+@media only screen and (max-width:550px)
+	#slider
+		.slide
+			div.slide-item
+				div 
+					padding: 0px 20px
+
+					h1 
+						font-size: 2rem
+						font-weight: 600
+
+					h2
+						letter-spacing: 2px
+
+

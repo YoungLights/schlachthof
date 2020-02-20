@@ -1,0 +1,91 @@
+.topic-control
+    a:link, a:active, a:visited 
+        display: flex
+        align-items: center
+        text-transform: uppercase 
+        margin-bottom: 20px
+        background: $lightgrey
+        color: $turquoise
+        border: 3px solid $black
+        padding: 15px 40px
+        font-size: 0.8em
+        font-weight: 900
+        +brd(20px) 
+
+        img 
+            height: 30px
+        
+        i 
+            font-size: 1.6em
+
+        span 
+            +transit(all 0.2s ease-in-out)
+            margin-left: 20px          
+
+        &:hover span, &.active span
+            transform: translateX(10px)
+
+        &:hover, &.active
+            background: $black
+    
+.calendar
+    text-align: center
+    margin-bottom: 30px
+
+    &:last-of-type
+        margin-bottom: 70px
+
+    header.calendar-header
+        background: $lightgrey
+        color: $turquoise
+        border: 3px solid $turquoise
+        padding: 20px
+        font-size: 1.1em
+        font-weight: 900
+        +brd(20px)
+        position: relative
+        z-index: 1
+        cursor: pointer
+        +transit(all 0.2s ease-in-out)
+        
+        &.calendar-header-active, &:hover
+            background: $turquoise
+            color: $white
+    
+    div.calendar-grid
+        border: 3px solid $turquoise
+        +brd(20px)
+        padding: 60px 30px 30px 30px
+        margin-top: -30px
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        justify-content: space-around
+        grid-gap: 12px
+        display: none
+
+        &.calendar-active
+            display: grid !important
+
+        span 
+            border: 2px solid $turquoise
+            +brd(10px)
+            font-weight: 900
+            text-transform: uppercase
+            color: $turquoise
+            padding: 10px
+            font-size: 0.8em
+            cursor: pointer
+            +transit(all 0.2s ease-in-out)
+
+            &.month-inactive
+                border-color: #c7d6d6
+                color: #c7d6d6
+
+                &:hover
+                    background: none
+                    color: #c7d6d6
+
+            &:hover, &.month-active
+                background: $turquoise
+                color: $white
+

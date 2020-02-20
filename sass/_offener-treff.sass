@@ -1,0 +1,337 @@
+#offener-treff
+	position: relative
+
+	img.offener-treff-bg
+		position: absolute
+		top: 0px
+		left: 0px
+		width: 100%
+		height: 100%
+		object-fit: cover 
+		z-index: 1
+
+	img.offener-treff-mask
+		position: absolute
+		top: 0px
+		left: 0px
+		width: 100%
+		z-index: 2
+
+	p 
+		text-transform: uppercase
+
+	header
+		margin-bottom: 50px
+		display: grid
+		grid-template-columns: auto auto
+		align-items: center
+		padding: 0px 40px
+
+		h1 
+			color: $yellow
+			justify-self: start
+
+		div
+			justify-self: end
+
+			a:link, a:active, a:visited
+				display: inline-flex
+				align-items: center
+				margin: 0px 0px 0px 20px
+				border-color: $black
+				font-size: 0.6em
+				background: none
+				color: $yellow
+				padding: 12px 25px
+				background: $black
+
+				&:hover
+					background: none
+					color: $black	
+
+				i
+					font-size: 2em
+					margin-right: 12px
+
+	#activities-header
+		transform: translateY(60px)
+		text-align: center
+		
+		h4
+			color: $yellow
+			display: inline-block
+			padding: 20px 40px
+			background: $black
+			font-weight: 900
+			letter-spacing: 2px
+			font-size: 1em
+			z-index: 9999
+	
+	#offener-treff-grid
+		z-index: 200
+		position: relative
+		
+		#offener-treff-activities
+			padding: 120px 120px 100px 120px
+			overflow: hidden
+			background: rgba(255, 180, 0, 0.93)
+
+			div#activities-items
+				display: flex
+				justify-content: center
+
+				div
+					align-items: center
+					margin-bottom: 30px
+					text-align: center
+
+					&:last-child
+						margin-bottom: 0px
+
+					img
+						height: 45px
+						width: 45px 
+
+					p 
+						margin: 20px 40px 0px 40px
+						color: $white
+						display: block
+						font-weight: 900
+						letter-spacing: 4px
+						font-size: 0.8em
+
+		#offener-treff-info	
+			padding: 110px 120px 30px 120px
+			background: rgba(255, 255, 255, 0.96)
+			
+			section
+				position: relative
+				display: grid 
+				grid-template-columns: 1fr 1fr
+				
+				article
+					font-weight: 600
+					margin: 40px 40px
+
+					h4 
+						color: $yellow
+						margin-top: 20px
+						+transit (all 0.2s ease-in-out)
+
+						&:hover
+							background: $black
+							border-color: $black
+					
+					h2
+						font-size: 1.2em
+						letter-spacing: 1px
+						margin-bottom: 5px
+
+					p, span 
+						color: $textgrey 
+						@extend .bodytext
+						text-transform: none	
+
+	#offener-treff-kontakt
+		margin-top: 30px
+		display: flex
+		justify-content: center
+		display: none
+
+		div:nth-child(2)
+			color: $white
+			margin-right: 40px
+
+			h1, h2
+				font-weight: 500
+
+			h1
+				font-size: 2em
+				line-height: 35px
+				color: $black
+				font-weight: 900			
+
+			h2
+				font-size: 1.1em
+				font-weight: 900
+
+		div
+			justify-self: center
+
+			a:link, a:active, a:visited
+				display: inline-flex
+				align-items: center
+				margin: 0px 15px
+				border-color: $black
+				background: none
+				color: $yellow
+				padding: 15px 30px
+				background: $black
+
+				&:hover
+					background: none
+					color: $black	
+
+				i
+					font-size: 2.6em
+					margin-right: 20px
+	
+	
+// .offener-treff
+// 	p 
+// 		text-transform: uppercase
+
+// 	#offener-treff-grid
+// 		display: grid
+// 		grid-template-columns: 0.7fr 1.3fr 
+
+// 		#offener-treff-activities
+// 			background: $dark 
+// 			padding: 100px 100px
+
+// 			h4
+// 				color: $orange
+// 				font-weight: 600
+// 				letter-spacing: 2px
+// 				margin-bottom: 20px
+				
+// 			div#oeffnungszeiten
+// 				margin-bottom: 60px 
+
+// 				div.zeiten
+// 					color: $white
+// 					margin-bottom: 12px
+// 					background: $orange
+// 					padding: 20px
+// 					+brd(15px)
+// 					position: relative
+						
+// 					img 
+// 						position: absolute
+// 						width: 30px
+// 						height: 30px
+// 						top: 15px
+// 						right: 12px
+
+// 					h3
+// 						font-weight: 900
+// 						font-size: 1em
+// 						margin-bottom: 5px
+// 						color: $dark
+
+// 					p
+// 						color: $lightgrey
+// 						font-size: 0.8em
+// 						line-height: 140%
+// 						font-weight: 600
+
+// 			div#activities-items
+
+// 				div
+// 					display: flex
+// 					align-items: center
+// 					margin-bottom: 20px
+
+// 					&:last-child
+// 						margin-bottom: 0px
+
+// 					img
+// 						height: 35px
+// 						width: 35px
+
+// 					p 
+// 						display: inline-block
+// 						margin-left: 30px
+// 						color: $lightgrey
+// 						letter-spacing: 4px
+// 						font-size: 0.8em
+
+// 		#offener-treff-info
+// 			background: $sun
+// 			padding: 100px 120px 110px 120px
+			
+// 			header
+// 				text-align: right
+// 				margin-bottom: 30px
+
+// 				h1 
+// 					color: $white
+
+// 			section
+// 				position: relative
+				
+// 				article
+// 					font-weight: 600
+// 					margin-left: 80px
+// 					margin-bottom: 40px
+// 					padding-bottom: 40px
+// 					border-bottom: dashed 1px $darkblue				
+
+// 					&:last-child
+// 						margin-bottom: 0px
+// 						padding-bottom: 0px
+// 						border-bottom: none
+
+// 					h2
+// 						color: $darkblue
+// 						letter-spacing: 9px
+// 						font-size: 1.1em
+// 						margin-bottom: 15px
+
+// 					p 
+// 						color: $white 
+// 						@extend .bodytext
+// 						text-transform: none
+
+// 					span 
+// 						position: absolute
+// 						left: 0px
+// 						height: 50px
+// 						width: 50px
+// 						+brd(100%)
+// 						background: $dark
+
+// 						img
+// 							height: 25px
+// 							width: 25px
+// 							@extend .imgcenter	
+
+// 	#offener-treff-kontakt
+// 		display: grid 
+// 		grid-template-columns: 1fr 1fr
+// 		margin-top: 130px
+// 		border-top: solid 1px #ccc
+// 		border-bottom: solid 1px #ccc
+// 		padding: 30px 0px
+
+// 		div:nth-child(1)
+// 			color: $white
+
+// 			h1, h2
+// 				font-weight: 500
+// 				color: $white
+
+// 			h1
+// 				font-size: 2.2em
+// 				line-height: 35px				
+
+// 			h2
+// 				font-size: 1.3em
+
+// 		div:nth-child(2)
+// 			justify-self: end
+
+// 			a:link, a:active, a:visited
+// 				display: inline-flex
+// 				align-items: center
+// 				margin-left: 30px
+// 				background: $dark
+// 				border-color: $dark
+
+// 				&:hover
+// 					background: none
+// 					color: $dark	
+
+// 				i
+// 					font-size: 2.4em
+// 					margin-right: 20px

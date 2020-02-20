@@ -1,0 +1,6 @@
+RewriteEngine On
+Options -Multiviews
+RewriteCond $1 !^(css|img|js|inc|admin)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d	
+RewriteRule ^([0-9a-zA-Z-]+)$ index.php?page=$1 [NC,L]

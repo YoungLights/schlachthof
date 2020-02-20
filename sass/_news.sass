@@ -1,0 +1,62 @@
+#news
+	article
+		margin-bottom: 60px
+
+		a:link, a:active, a:visited
+			&.read-more
+				padding: 10px 20px
+				background: $dark
+				border: solid 2px $dark
+				color: $white
+				font-size: 0.5em
+				+brd(10px)
+				display: inline-block
+				text-transform: uppercase
+				margin-top: 25px
+				font-weight: 900
+				letter-spacing: 1px
+
+				&:hover
+					background: none
+					color: $dark
+
+		p 
+			@extend .bodytext
+			color: $textgrey
+
+			a:link, a:active, a:visited
+				font-weight: 900
+				color: $dark
+
+				&:hover
+					color: $petrol 
+
+		.header
+			margin-bottom: 10px 
+			
+			h4
+				letter-spacing: 1px	
+				font-size: 1.2em
+		
+			span 
+				display: block
+				background: $yellow
+				height: 2px
+				z-index: -1
+				margin-top: 3px
+
+@media only screen and (max-width:1024px)
+	#news
+		article
+			.header
+				h4 
+					font-size: 1em
+
+@media only screen and (max-width:620px)
+	#news
+		article
+			.header
+				h4 
+					letter-spacing: 0px
+					margin-bottom: 15px		
+				

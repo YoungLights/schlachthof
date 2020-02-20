@@ -1,0 +1,127 @@
+#events
+	article
+		display: grid
+		grid-template-columns: 1.7fr 0.3fr
+		margin-bottom: 40px
+
+		&:last-of-type .event-details
+			border-bottom: none
+
+		.event-details
+			padding: 0px 30px 30px 0px
+			border-bottom: dashed 1px $dark
+
+			h1
+				color: $dark
+				font-size: 1.2rem
+				letter-spacing: 2px	
+
+			h4
+				color: $textgrey
+				font-weight: 600
+				font-size: 0.8em							
+
+		.event-date
+			background: $dark
+			color: $yellow
+			display: flex
+			align-items: center
+			justify-content: center
+			padding: 40px
+			text-transform: uppercase
+
+			span 	
+				display: block
+				font-weight: 800
+
+				&.day
+					font-size: 1.9em
+					letter-spacing: 2px
+					line-height: 30px
+
+				&.month
+					font-size: 1.3em
+					letter-spacing: 1px 
+
+				&.year		
+					font-size: 1.1em
+					color: $white
+					letter-spacing: 2px
+
+aside.event-items
+	margin-top: 20px
+
+	a:link, a:active, a:visited
+		display: inline-flex
+		align-items: center
+		margin: 10px 40px 10px 0px
+		color: $yellow
+		font-size: 0.9em
+
+		&:hover h2 
+			color: $dark
+			transform: translateX(3px)
+		
+		h2, span
+			+transit(all 0.2s ease-in-out)
+
+		h2
+			font-size: 1em
+			margin-left: 10px
+
+		span
+			height: 40px
+			width: 40px
+			+brd(100%)
+			background: $dark
+			position: relative
+			+transit(all 0.1s ease-in-out)
+
+			img
+				height: 22px
+				width: 22px
+				@extend .imgcenter	
+
+@media only screen and (max-width:1024px)
+	#events
+		background: #efefef
+
+		article
+			grid-template-columns: 1.7fr 0.3fr
+			margin-bottom: 40px
+
+			.event-details
+				padding: 0px 30px 30px 0px
+
+				h1
+					font-size: 1rem
+					letter-spacing: 1px
+
+	aside.event-items
+		a:link, a:active, a:visited
+			margin: 10px 30px 10px 0px
+			font-size: 0.8em
+
+@media only screen and (max-width:620px)
+	#events
+		article
+			grid-template-columns: 1fr
+			
+			.event-details
+				order: 2
+				padding: 0px 0px 10px 0px
+				border-bottom: none
+			
+			.event-date
+				padding: 12px 5px 
+				margin-bottom: 20px 
+				order: 1
+
+				div 
+					span 
+						font-size: 1.1em !important
+						display: inline-block
+						letter-spacing: 2px !important
+
+
+

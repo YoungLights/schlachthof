@@ -1,0 +1,159 @@
+// BOX OVERLAY
+.box-overlay
+    position: fixed
+    top: 0px
+    left: 0px
+    width: 100%
+    height: 100%
+    z-index: 9999
+    justify-content: center 
+    align-items: center
+    display: none
+
+    .box-flex
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 100%
+
+        .box-box
+            background: $white
+            padding: 40px 80px
+            position: relative
+            z-index: 200
+            +brd(10px)
+            text-align: center
+
+            img 
+                width: 60px
+                height: auto
+
+            p 
+                font-size: 1.1em
+                margin-top: 20px
+                font-weight: 600
+                text-transform: uppercase
+                line-height: 140%
+
+                span
+                    font-size: 0.8em
+
+    .box-mask
+        position: absolute
+        top: 0px
+        left: 0px
+        width: 100%
+        height: 100% 
+        background: $black
+        +opacit(40)
+
+// BIG OVERLAY
+.noscroll
+    overflow: hidden
+    padding-right: 17px
+    
+.overlay
+    position: fixed
+    top: 0px
+    left: 0px
+    bottom: 0px
+    right: 0px
+    height: 100%
+    width: 100%
+    z-index: 800
+    display: none
+    overflow-y: scroll
+    
+    .overlay-mask   
+        background: rgba(255,255,255,0.97)
+        position: absolute 
+        top: 0px
+        left: 0px
+        right: 0px
+        min-height: 100%
+        +opacit(0)
+        +transit(all 0.4s ease-in-out)
+    
+    span.overlay-close
+        color: $dark
+        font-size: 3em
+        position: absolute
+        z-index: 500
+        top: 30px
+        right: 50px
+        +transit(all 0.2s ease-in-out)
+        cursor: pointer
+
+        &:hover
+            +rotate(180deg)
+
+#overlay-news, #overlay-event, #overlay-team
+    display: none
+    +opacit(0)
+    
+.overlay-content
+    padding: 130px 250px
+    
+    aside.event-items
+        a:link, a:active, a:visited
+            position: absolute
+            right: 0px
+    
+    article
+        position: relative 
+        display: block
+
+        .overlay-more-info-team
+            margin-top: 30px
+
+            a:link, a:active, a:visited 
+                margin: 8px 20px 30px 0px !important
+
+            h5 
+                &:first-of-type
+                    margin-top: 10px
+                
+                margin-top: 5px
+
+                a:link, a:active, a:visited, span
+                    color: $textgrey
+                    display: inline-block
+                    font-weight: 600
+                    margin-bottom: 8px !important
+                    margin-left: 10px !important
+        
+        .overlay-more-info
+            margin-top: 50px
+
+            a:link, a:active, a:visited 
+                @extend .btn
+                margin: 20px 20px 40px 0px
+        
+        h4 
+            color: $textgrey
+            font-weight: 600
+            font-size: 0.9em
+        
+        h2 
+            color: $yellow
+            margin-bottom: 15px
+        
+        h1
+            font-size: 1.2em
+
+        h3
+            color: $textgrey
+            font-size: 0.9em
+            line-height: 90%
+            font-weight: 600
+        
+        p 
+            margin-top: 10px
+            @extend .bodytext
+            color: $textgrey
+
+        img 
+            position: relative
+            z-index: 600
+
+        
